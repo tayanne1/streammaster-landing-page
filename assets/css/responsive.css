@@ -1,0 +1,709 @@
+/* Celulares pequenos (319px - 599px)*/
+@media (min-width: 319px) and (max-width: 599px) {
+
+  body, html {
+    overflow-x: hidden;
+    width: 100%; /* Remove 100vh que causava o problema */
+    max-width: 100vw;
+  }
+
+
+  /* ---- MENU HAMBURGUER - VERSÃO CORRIGIDA ---- */
+  .cabecalho .menunav {
+    height: 60px;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .nomesite img {
+    width: 60px !important;
+    position: absolute !important;
+    left: 5px !important;
+    top: 5px !important;
+  }
+
+  label #btn{
+    display: block;
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+
+  }
+
+
+  /* ---- MENU EM COLUNA - VERSÃO FUNCIONAL ---- */
+  .left-container .linknav {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: #34495e70;
+    box-shadow: 10px 0 10px rgba (0, 0, 0, 0.1);
+    top: 0px !important;
+    left: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+    z-index: 10;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    padding-top: 40px;
+  } 
+
+  .menunav .left-container .linknav li {
+    display: block !important;
+    margin: 15px 0 !important;
+    line-height: 2.5 !important;/* */
+  }
+
+  .menunav .left-container .linknav li a{
+    font-size: 15px !important;
+    padding: 10px 0 !important;
+  }
+
+
+  /* ---- Quando o checkbox está marcado ---- */
+  #check:checked ~ .left-container ul {
+    left: 0;
+  }
+  #check:checked ~ label #btn {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: 11;
+  }
+
+
+  /* ---- NAVDIREITA ---- */
+  .menunav .navdireita {
+    position: absolute !important;
+    right: 60px !important;
+    left: auto !important;
+    display: flex !important;
+    gap: 10px !important;
+    margin: 0 !important;
+  }
+
+  .menunav .navdireita a{
+    padding: 10px;
+    font-size: 13px !important;
+    text-transform: lowercase;
+  }
+
+  .menunav .navdireita i{
+    font-size: 13px !important;
+  }
+
+  .menunav .navdireita li{
+    margin: 0 !important;
+  }
+
+
+  /* ---- SEÇÃO HERO CAPA ----*/
+  .capa {
+    height: 55vh;
+    background-size: cover;
+    background-position: top;
+  }
+  .capameiotxt{
+    font-size: 12px !important;
+    position: relative;
+    top: -10%;
+    text-align: center;
+  }
+
+  .capameiotxt .botao {
+    display: block !important; /* Mostra o botão novamente */
+    width: 140px !important;
+    padding: 12px !important;
+  }
+
+  .titulomeio{
+    display: none;
+  }
+
+  .capameiotxt p {
+    font-size: 14px;
+  }
+
+
+  /* ---- CARROSSEL ----*/
+  .filmes h2{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .filmes .carrosselfilmes {
+    gap: 0.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .imgfilmes {
+    position: relative;
+    width: 160px; 
+    height: 290px; 
+    word-wrap: break-word
+  }
+
+  .imgfilmes img {
+    width: 160px;
+    height: 237px;
+  }
+
+
+  /* ---- testegratis ---- */
+  .testegratis{
+    text-align: center;
+    width: 93%; 
+    padding: 50px;
+    margin: 0;
+  }
+
+  .testegratis a{
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .testegratis p {
+    font-size: 15px;
+  }
+
+
+  /* ---- PLANOS ---- */
+  .plano {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .planosdeservico {
+    text-align: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .plano .escolherplano h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .plano .escolherplano p {
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .planosdeservico li {
+    width: 300px;
+    height: 350px;
+    padding: 5px;
+  }
+
+  .planosdeservico li .caixaplano1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px !important;
+    position: relative; 
+    height: 100%; 
+  }
+
+  .caixaplano1 p {
+    font-size: 16px;
+  }
+
+  .caixaplano1 a {
+    position: absolute;
+    bottom: 40px; 
+  }
+
+  .planobranco {
+    background-color: #fff;
+  }
+
+
+  /* ---- faqs ---- */
+  .faqs {
+    padding: 10px;
+  }
+
+  .faqs .detalhe .resumo, .faqs .detalhe p {
+    width: 50vh;
+  }
+
+  .faqs .detalhe p {
+    font-size: 14px; 
+  }
+
+
+  /* ---- footer ---- */
+  footer {
+    flex-direction: column;
+    padding: 0;
+    font-size: 12px; 
+  }
+
+  footer .legal-links nav ul {
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 0 5px 0;
+  }
+
+  footer .social-media ul{
+    font-size: 15px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  footer h3 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  address {
+    position: relative;
+    bottom: 37px;
+  }
+}
+
+
+
+
+
+/* Celulares Médios e Tablets Pequenos (600px - 849px) */
+@media (min-width: 600px) and (max-width: 850px) {
+  /* ===== CABEÇALHO ===== */
+  .cabecalho .menunav {
+    height: 70px;
+    padding: 0 0 0 15px;
+  }
+  
+  .nomesite img {
+    width: 70px;
+    top: -10px !important;
+    left: 10px !important;
+  }
+  
+  .linknav {
+    gap: 5px !important;
+  }
+
+  .linknav li{
+    margin:0 10px !important;
+  }
+
+   .menunav a {
+    font-size: 13px;
+   }
+  
+    .navdireita {
+    display: flex;
+    margin-left: auto !important;
+    padding: 0 10px;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .navdireita li{
+    margin: 0 !important;
+
+  }
+
+  
+  .botaosubscribe a {
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+  
+
+  
+  /* ===== SEÇÃO HERO ===== */
+
+  .capa {
+  position: relative;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px; 
+  }  
+
+  .capameiotxt {
+    margin-top: 30%;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .capameiotxt p {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .capameiotxt .botao {
+    padding: 12px;
+    width: 160px;
+    font-size: 14px;
+  }
+  
+  /* ===== CARROSSEL ===== */
+  .filmes h2 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+  
+  .filmes .carrosselfilmes {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 0 15px;
+  }
+  
+  .imgfilmes {
+    width: 180px;
+    height: 320px;
+  }
+  
+  .imgfilmes img {
+    width: 180px;
+    height: 280px;
+  }
+  
+  .imgfilmes h3 {
+    font-size: 16px;
+  }
+  
+  /* ===== TESTE GRÁTIS ===== */
+  .testegratis {
+    padding: 30px;
+    margin: 30px 0;
+  }
+  
+  .testegratis a {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+  
+  .testegratis p {
+    font-size: 16px;
+  }
+  
+  /* ===== PLANOS ===== */
+  .planosdeservico {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* flex-direction: column;
+    align-items: center;
+    gap: 5px; */
+  }
+  
+  .planosdeservico li {
+    flex:0 0 260px;
+    max-width: 260px;
+    height: 360px;
+    /* width: 75%;
+    height: auto;
+    padding: 20px; */
+  }
+
+  .planosdeservico li:has(article.planobranco){
+    width: 270px;
+    max-width: 270px;
+    height: 360px;
+    flex: 0 0 260px;
+    padding: 5px!important;
+    display: flex;
+    justify-content: center;
+    order: 1;
+   }
+
+   .planobranco{
+    flex:0 0 260px;
+    max-width: 260px;
+    height: 360px;
+   }
+
+  
+  .caixaplano1 a {
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    font-size: 15px;
+  } 
+
+
+  .caixaplano1 p {
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.caixaplano1 h5 {
+  border-bottom: 2px #ffffff solid;
+  padding: 7px;
+  font-size: 20px;
+}
+
+.planobranco h5 {
+  border-bottom: 2px #ff6f00 solid;
+}
+  
+  /* ===== FAQ ===== */
+
+  
+  .faqs h2 {
+    font-size: 24px;
+  }
+  
+  .faqs .detalhe .resumo {
+    width: 90vw;
+    font-size: 16px;
+  }
+  
+  .faqs .detalhe p {
+    width: 85vw;
+    font-size: 14px;
+  }
+  
+  /* ===== RODAPÉ ===== */
+  footer {
+    padding: 20px;
+  }
+  
+  footer .legal-links nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+/* Notebooks ASUS e similares (850px - 1280px) */
+@media (min-width: 850px) and (max-width: 1280px) {
+  body {
+    height: 244vh;
+  }
+  /* ----- CABEÇALHO ----- */
+  .cabecalho .menunav {
+    padding: 0 5px;
+  }
+  
+  .nomesite img {
+    width: 80px !important;
+    top: -5px !important;
+  }
+  
+  .navdireita {
+    display: flex;
+    margin-left: auto !important;
+    gap: 5px;
+  }
+
+  .navdireita li {
+    margin: 5px !important;
+  }
+
+  /* ----- capa -----*/
+  .capa {
+  position: relative;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px; 
+}  
+  
+  /* ----- HERO SECTION ----- */
+  .capameiotxt {
+    position: relative;
+    top: 200px;
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .capameiotxt p {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+  
+  .capameiotxt .botao {
+    padding: 15px;
+    width: 180px;
+  }
+  
+  /* ----- CARROSSEL DE FILMES ----- */
+  .filmes .carrosselfilmes {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .imgfilmes {
+    width: 200px;
+    height: 350px;
+  }
+  
+  .imgfilmes img {
+    width: 200px;
+    height: 300px;
+  }
+  
+  /* ----- PLANOS DE SERVIÇO ----- */
+  .planosdeservico {
+    gap: 10px;
+    padding: 0 ;
+  }
+  
+  .planosdeservico li {
+    width: 270px;
+    height: 370px;
+  }
+  
+  .caixaplano1 a {
+    left: 8%;
+    padding: 12px 30px;
+  }
+  
+  /* ----- FAQ ----- */
+
+  .faqs .detalhe .resumo {
+    width: 90vw;
+  }
+  
+  .faqs .detalhe p {
+    width: 85vw;
+    font-size: 15px;
+  }
+  
+  /* ----- RODAPÉ ----- */
+  footer {
+    padding: 20px 40px;
+  }
+}
+
+
+
+
+
+/* ===== TVs e Telas Muito Grandes (4K ou maiores) ===== */
+@media (min-width: 1921px) {
+  /* ===== CONTAINER PRINCIPAL ===== */
+  body {
+    max-width: 2560px; /* Limita em telas ultra-wide */
+    margin: 0 auto;
+    font-size: 1.1vw;
+  }
+
+  /* ===== CABEÇALHO ===== */
+  .cabecalho .menunav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 110px;
+    position: relative; /* importante! */
+    z-index: 9;
+  }
+
+  .nomesite img {
+    width: 140px;
+    top: 0;
+    height: auto;
+    position: relative;
+  }
+
+  .linknav {
+    gap: 4vw;
+    margin-left: 2%;
+  }
+
+  .linknav li a {
+    font-size: 1vw;
+    transition: all 0.3s;
+  }
+
+  .navdireita {
+    gap: 2.5vw;
+  }
+
+  .botaosubscribe a {
+    padding: 0.8vw 2vw;
+    font-size: 0.9vw;
+    min-width: 200px;
+  }
+
+  /* ===== HERO / CAPA ===== */
+  .capameiotxt {
+    margin-top: 7%;
+    font-size: 2vw;
+  }
+
+  .capameiotxt p {
+    font-size: 1.3vw;
+    max-width: 55%;
+    margin: 2vw auto 0;
+  }
+
+  .capameiotxt .botao {
+    padding: 1.2vw;
+    width: 14vw;
+    font-size: 1vw;
+    margin-top: 3vw;
+  }
+
+  /* ===== PLANOS ===== */
+  .planosdeservico {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw; /* já definido */
+    justify-content: center; /* ou space-around */
+    padding: 0 6%;
+  }
+
+  .planosdeservico li {
+  flex: 1 1 20vw; /* ajusta dinamicamente sem ultrapassar */
+  max-width: 380px;
+  min-width: 260px;
+  height: auto;
+  background: #222;
+  border-radius: 10px;
+}
+
+  /* ===== FAQ ===== */
+  .faqs {
+    max-width: 1800px;
+    padding: 0 6%;
+  }
+
+  .faqs h2 {
+    font-size: 2vw;
+  }
+
+  .faqs .detalhe .resumo {
+    font-size: 1vw;
+  }
+
+  /* ===== RODAPÉ ===== */
+  footer {
+    padding: 3.5vw 6%;
+  }
+}
