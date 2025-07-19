@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+/* ------------------- Reset e Gerais ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background-color: #151313;
+}
+
+/* ------------------- Cabeçalho ------------------- */
+.cabecalho {
+  position: relative;
+  height: 670px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.cabecalho::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+background-image: url("../../../assets/img/supercapa1.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9) blur(6px);
+  z-index: 0;
+}
+
+.cabecalho > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cabecalho .menunav .nomesite {
+  display: flex; 
+  align-items: center;
+  justify-content: center; /**/
+  margin: 15px;
+}
+
+.cabecalho .menunav .nomesite img {
+  width: 70px !important; 
+  position: absolute;
+  top: -40px !important;
+  left: -50px !important;
+
+}
+
+.navdireita a {
+  color: #fff;
+}
+
+/* ------------------- Navegação ------------------- */
+.cabecalho .menunav {
+  margin: 0;
+  padding: 0;
+  height: 80px ;
+  width: 100%;
+  display: flex;
+  align-items: center; /* */
+  /*justify-content: space-between; */
+  /* justify-content: flex-start; */
+  gap: 25px;
+  background-color: rgb(50, 50, 50, 0.5);
+  position: relative;
+}
+
+/*.menunav .linknav{
+   margin-left: 60px; 
+}*/
+
+.cabecalho .menunav .linknav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+}
+
+.cabecalho .menunav .left-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre logo e links */
+  flex-grow: 1;
+}
+
+ .menunav a {/*.linknav */
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative; */
+  
+}
+
+.linknav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+.menunav ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+.navdireita {
+   margin-left: auto; 
+} 
+
+
+.navdireita li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+ 
+}
+
+.botaosubscribe a {
+  background-color: #ffffff;
+  color: #ff6f00;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  
+}
+
+.linknav li a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6f00;
+  transition: width 0.3s ease;
+}
+
+.linknav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ff6f00;
+  transition: width 0.3s ease; 
+}
+
+.botaosubscribe a:hover {
+  color: #ffffff;
+  background-color: #ff6f00;
+  transition: width 0.3s ease;
+}
+
+label #btn,
+label #cancel {
+  color: #ffffff;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;/*  */
+  position: absolute;
+  right: 15px;
+  top: -10px;
+}
+
+#check {
+  /**/ display: none; 
+}
+
+
+/* ------------------- Conteúdo Principal ------------------- */
+.detalhefilmes {
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  gap: 40px;
+  color: white;
+  text-align: center;
+}
+
+.capafilme img {
+  width: 300px;
+  height: 400px;
+}
+
+.detalhefilmes .nomeinfo {
+  text-align: left;
+}
+
+.detalhefilmes .nomeinfo h1 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.nomeeicones {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nomeeicones a {
+  font-size: 25px;
+  color: #fff;
+}
+
+.nomeeicones .fa-solid.active {
+  color: #ff4400;
+}
+
+.nomeeicones .fa-check.active {
+  color: #4CAF50;
+}
+
+.detalhefilmes .info {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+
+ .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  padding: 15px 15px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 3px solid #ffffff;
+}
+
+.viewer {
+  padding: 15px 15px 10px 0 !important;
+}
+
+.tabs .tab {
+  width: 88%;
+  height: 290px;
+  padding: 15px 0;
+  font-size: 17px;
+  display: none;
+  order: 1;
+  overflow-y: auto;
+  line-height: 25px;
+}
+
+.tabs .tab .spacep,
+.funfact {
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+.tabs input[type="radio"]:checked + label {
+  border-bottom: 5px solid #ff6f00;
+  color: #ff6f00;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+} /**/
+
+.watch-btn {
+  position: absolute;
+  left: 55px;
+  margin-top: 10px;
+  padding: 15px;
+  width: 180px;
+  background-color: #ff6f00;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.watch-btn a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.watch-btn:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.7);
+  transform: scale(1.05);
+}
+
+.watch-btn:hover a {
+  color: #ff6f00;
+}
+
+.ator {
+  font-weight: bold;
+}
+
+.personagem,
+.info,
+.info a {
+  color: #B5AFAF;
+  font-weight: normal;
+}
+.info{
+  display: flex;
+  gap: 10px;
+}
+
+/* ------------------- Sessões Recomendações ------------------- */
+.mightlike {
+  font-size: 25px;
+  margin: 30px 68px 15px;
+  padding: 5px 15px;
+  border-bottom: 2px solid #ff6f00;
+  color: #fff;
+}
+
+.filmesmightlike,
+.seriesmightlike {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.seriesmightlike {
+  margin-top: 30px;
+}
+
+.filmelist a {
+  display: flex;
+  flex-direction: column;
+}
+
+.filmelist a img {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+}
+
+.filmelist h3 {
+  text-align: center;
+  color: #ff6f00;
+  padding: 10px;
+}
+
+.filmelist a:hover img {
+  border: 3px solid #fff;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.filmelist a:hover h3 {
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* ------------------- Scrollbar ------------------- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff6f00;
+  border-radius: 1px;
+  border: 2px solid #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8800;
+}
+
+/* ------------------- Rodapé ------------------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #2c2828;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .legal-links nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 20px;
+}
+
+footer .legal-links nav a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer .legal-links nav a:hover {
+  color: #ff6f00; /* cor laranja */
+}
+
+footer .social-media ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+footer .social-media ul a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .social-media ul a:hover {
+  color: #ff6f00; /* cor laranja */
+}

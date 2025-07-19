@@ -1,0 +1,536 @@
+/* Celulares pequenos (319px - 599px) */
+@media (min-width: 319px) and (max-width: 599px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .cabecalho .menunav {
+    height: 60px;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .cabecalho {
+    position: relative;
+    z-index: auto;
+}
+
+  .nomesite img {
+    width: 60px !important;
+    position: absolute !important;
+    left: 5px !important;
+    top: 5px !important;
+  }
+
+  label #btn {
+    display: block;
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+  .left-container .linknav {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background-color: #34495e70;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+    top: 0px !important;
+    left: 100%; /* */
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+    z-index: 10;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .menunav .left-container .linknav li {
+    display: block !important;
+    margin: 15px 0 !important;
+    line-height: 2.5 !important;
+  }
+
+  .menunav .left-container .linknav li a {
+    font-size: 15px !important;
+    padding: 10px 0 !important;
+    cursor: pointer;
+  }
+  .menunav .left-container .linknav li a:hover {
+    border-bottom: 2px #ff6f00 solid;
+  }
+
+  #check:checked ~ .left-container ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+    position: absolute;
+    right: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: 11;
+  }
+
+  .menunav .navdireita {
+    position: absolute !important;
+    right: 60px !important;
+    left: auto !important;
+    display: flex !important;
+    gap: 10px !important;
+    margin: 0 !important;
+  }
+
+  .menunav .navdireita a {
+    padding: 10px;
+    font-size: 13px !important;
+    text-transform: lowercase;
+  }
+
+  .menunav .navdireita i {
+    font-size: 13px !important;
+  }
+
+  .menunav .navdireita li {
+    margin: 0 !important;
+  }
+
+  .detalhefilmes {
+    position: relative;
+    z-index: 1;/*  */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    width: 95%;
+
+  }
+
+  .capafilme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .capafilme img {
+    width: 150px;
+    margin-top: -40px;
+    max-width: 300px;
+    height: 230px;
+  }
+
+  .detalhefilmes .nomeinfo {
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .nomeeicones {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+  }
+
+  .info {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    gap: 10px 0;
+  }
+
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tabs label {
+    padding: 5px 5px 5px;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 3px solid #ffffff;
+  }
+
+  .viewer {
+    padding: 5px 5px 5px 0 !important;
+    font-size: 14px;
+  }
+
+  .tabs .tab {
+    width: 100%;
+    height: 190px;
+    padding: 15px 0;
+    font-size: 14px;
+    display: none;
+    order: 1;
+    overflow-y: auto;
+    line-height: 25px;
+  }
+
+  .tabs .tab p {
+    font-size: 14px;
+  }
+
+  .tabs .tab iframe {
+    width: 90%;
+    height: 150px;
+  }
+
+  .watch-btn {
+    display: none;
+  }
+
+
+/* Estilo do título h2 das seções */
+.mightlike {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Container dos artigos (filmes e séries) */
+.filmesmightlike,
+.seriesmightlike {
+  display: flex;
+  gap: 15px; /* Espaço entre os cards */
+  justify-content: center;
+  flex-wrap: wrap; /* Para quebrar linha em telas pequenas */
+  padding: 0 10px;
+}
+
+/* Cada card de filme/série */
+.filmelist {
+  list-style: none;
+  max-width: 120px;
+}
+
+/* Link dentro do card */
+.filmelist a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Imagem fixa 100px de largura, proporcional na altura */
+.filmelist a img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Pequena animação ao passar o mouse na imagem */
+.filmelist a img:hover {
+  transform: scale(1.05);
+}
+/* Título do filme/série */
+.filmelist a h3 {
+  font-size: 14px;
+  margin-top: 2px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  footer {
+    flex-direction: column;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  footer .legal-links nav ul {
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 0 5px 0;
+  }
+
+  footer .social-media ul {
+    font-size: 15px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  footer h3 {
+    position: relative;
+    bottom: 30px;
+  }
+
+  address {
+    position: relative;
+    bottom: 37px;
+  }
+}
+
+
+
+
+
+
+
+/* Celulares Médios e Tablets Pequenos (600px - 849px) */
+@media (min-width: 598px) and (max-width: 850px) {
+  /* ===== CABEÇALHO ===== */
+  .cabecalho .menunav {
+    height: 70px;
+    padding: 0 0 0 15px;
+  }
+  
+  .nomesite img {
+    width: 70px;
+    top: -10px !important;
+    left: 10px !important;
+  }
+  
+  .linknav {
+    gap: 5px !important;
+  }
+
+  .linknav li{
+    margin:0 10px !important;
+  }
+
+   .menunav a {
+    font-size: 13px;
+   }
+  
+    .navdireita {
+    display: flex;
+    margin-left: auto !important;
+    padding: 0 10px;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .navdireita li{
+    margin: 0 !important;
+
+  }
+
+  
+  .botaosubscribe a {
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+
+   .detalhefilmes {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: row;
+    width: 90%;
+    margin: 5px;
+    gap: 4px;
+  }
+
+  .capafilme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .capafilme img {
+    width: 200px;
+    margin-top: -80px;
+    margin-left: 20px;
+    max-width: 300px;
+    height: 250px;
+  }
+
+  .detalhefilmes .nomeinfo {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .nomeeicones {
+    gap: 0 10px;
+  }
+
+  .watch-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 50px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    gap: 10px 0;
+  }
+
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tabs label {
+    padding: 5px;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 3px solid #ffffff;
+  }
+
+  .viewer {
+    padding: 5px 5px 5px 0 !important;
+    font-size: 14px;
+  }
+
+  .tabs .tab {
+    width: 100%;
+    height: 200px;
+    padding: 15px 0;
+    font-size: 14px;
+    display: none;
+    order: 1;
+    overflow-y: auto;
+    line-height: 25px;
+  }
+
+  .tabs .tab p {
+    font-size: 14px;
+  }
+
+  .tabs .tab iframe {
+    width: 80%;
+    height: 245px;
+  }
+
+    /* ===== RODAPÉ ===== */
+  footer {
+    padding: 20px;
+  }
+  
+  footer .legal-links nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+/* Notebooks ASUS e similares (850px - 1280px) */
+@media (min-width: 850px) and (max-width: 1280px) {
+  body {
+    height: 244vh;
+  }
+  /* ----- CABEÇALHO ----- */
+  .cabecalho .menunav {
+    padding: 0 5px;
+  }
+  
+  .nomesite img {
+    width: 80px !important;
+    top: -5px !important;
+  }
+  
+  .navdireita {
+    display: flex;
+    margin-left: auto !important;
+    gap: 5px;
+  }
+
+  .navdireita li {
+    margin: 5px !important;
+  }
+  /* ----- RODAPÉ ----- */
+  footer {
+    padding: 20px 40px;
+  }
+}
+
+
+
+
+
+
+/* ===== TVs e Telas Muito Grandes (4K ou maiores) ===== */
+@media (min-width: 1921px) {
+  /* ===== CONTAINER PRINCIPAL ===== */
+  body {
+    max-width: 2560px; /* Limita em telas ultra-wide */
+    margin: 0 auto;
+    font-size: 1.1vw;
+  }
+
+  /* ===== CABEÇALHO ===== */
+  .cabecalho .menunav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 110px;
+    position: relative; /* importante! */
+    z-index: 9;
+  }
+
+  .nomesite img {
+    width: 140px;
+    top: 0;
+    height: auto;
+    position: relative;
+  }
+
+  .linknav {
+    gap: 4vw;
+    margin-left: 2%;
+  }
+
+  .linknav li a {
+    font-size: 1vw;
+    transition: all 0.3s;
+  }
+
+  .navdireita {
+    gap: 2.5vw;
+  }
+
+  .botaosubscribe a {
+    padding: 0.8vw 2vw;
+    font-size: 0.9vw;
+    min-width: 200px;
+  }
+
+  /* ===== RODAPÉ ===== */
+  footer {
+    padding: 3.5vw 6%;
+  }
+}

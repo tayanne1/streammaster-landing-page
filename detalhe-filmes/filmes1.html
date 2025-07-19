@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/c3777539d2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" type="image/png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets2/css/style2.css" />
+    <link rel="stylesheet" href="assets2/css/responsive2.css" />
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
+
+    <title>StreamMaster - Detalhes de Filme</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <nav class="menunav" role="navigation" aria-label="Main Navigation">
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fa-solid fa-bars" id="btn"></i>
+          <i class="fa-solid fa-times" id="cancel"></i>
+        </label>
+        <div class="left-container">
+          <h1 class="nomesite">
+            <a href="#">
+              <img src="../assets/img/logo.png" alt="StreamMaster Logo" />
+            </a>
+          </h1>
+
+          <ul class="linknav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Upcoming</a></li>
+          </ul>
+        </div>
+
+        <ul class="navdireita">
+          <li>
+            <a href="#" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </li>
+          <li class="botaosubscribe">
+            <a href="#">Subscribe Now</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <article class="detalhefilmes">
+        <!-- Imagem do filme -->
+        <figure class="capafilme">
+          <img
+            src="https://i.pinimg.com/736x/d4/55/e2/d455e222e4c605f8ef678f1f8a433454.jpg"
+            alt="Capa do filme Título do Filme"
+          />
+          <figcaption class="watch-btn"><a href="#">Watch Now</a></figcaption>
+        </figure>
+
+        <!-- Título do filme-->
+        <div class="nomeinfo">
+          <div class="nomeeicones">
+            <h1>Superman<h1>
+            <a href="#" class="save-btn"><i class="fa-solid fa-bookmark"></i></a>
+            <a href="#" class="watched-btn"><i class="fa-solid fa-check"></i></a>                     
+          </div>
+
+
+          <div class="info">
+            <p>2h 28min</p>
+            <p>2025</p>
+            <a href="#">Action,</a>
+            <a href="#">Adventure,</a>
+            <a href="#">Sci-Fi</a>
+          </div>
+
+          <!-- Sinopse -->
+          <article class="tabs">
+            <input
+              type="radio"
+              id="overviewtab"
+              name="tabs"
+              checked="checked"
+            />
+            <label for="overviewtab" class="viewer">overview</label>
+            <section class="tab">
+              <p>
+                After years of hiding in plain sight, Clark Kent embraces his
+                true identity as Superman, Earth's guardian and symbol of hope.
+                Struggling to find balance between his Kryptonian origins and
+                his human upbringing, Clark faces a powerful enemy — Lex Luthor,
+                a genius with a god complex who sees Superman as a threat to
+                humanity.Directed by James Gunn, this new chapter in the DC
+                Universe reintroduces the Man of Steel with emotional depth,
+                thrilling action, and a story of identity and destiny.
+              </p>
+            </section>
+
+            <!-- Cast -->
+            <input type="radio" id="casttab" name="tabs" />
+            <label for="casttab">Cast</label>
+            <section class="tab">
+              <p class="spacep">
+                <strong class="ator">David Corenswet — </strong> <span class="personagem"> Clark Kent / Superman</span>  <br />
+                <strong class="ator">Rachel Brosnahan — </strong> <span class="personagem"> Lois Lane </span>  <br />
+                <strong class="ator">Nicholas Hoult —  </strong> <span class="personagem"> Lex Luthor</span>  <br />
+                <strong class="ator">Isabela Merced — </strong> <span class="personagem"> Hawkgirl </span>  <br />
+                <strong class="ator">Nathan Fillion —  </strong> <span class="personagem"> Guy Gardner</span>  <br />
+                <strong class="ator">Edi Gathegi — </strong> <span class="personagem">Mister Terrific</span>  <br />
+                <strong class="ator">Anthony Carrigan — </strong> <span class="personagem">Metamorpho</span>  <br />
+              </p>
+            </section>
+
+            <!-- Trailer & More -->
+            <input type="radio" id="trailertab" name="tabs" />
+            <label for="trailertab">Trailer & More</label>
+            <section class="tab">
+              <iframe width="460" height="255" src="https://www.youtube.com/embed/OfpXgjP4AOs?si=CSgPiSLEhvztvY16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              <p class="spacep">
+                <strong class="ator">Director:</strong> <span class="personagem">James Gunn</span> <br />
+                <strong class="ator">Writers:</strong> <span class="personagem">James Gunn • Jerry Siegel • Joe Shuster</span> <br />
+                <strong class="ator">Languages Available:</strong> <span class="personagem">English, Portuguese (BR), Spanish, French</span> <br />
+                <strong class="ator">Subtitles:</strong> <span class="personagem"> Available in 10+ languages</span> <br />
+              </p>
+            </section>
+
+            <!-- About -->
+            <input type="radio" id="abouttab" name="tabs" />
+            <label for="abouttab">About</label>
+            <section class="tab">
+              <p class="spacep">
+                <strong class="ator"> Studio: </strong> <span class="personagem">DC Studios • Warner Bros.n</span> <br />
+                <strong class="ator"> Franchise:</strong> <span class="personagem">DC Universe (New Chapter 1)</span> <br />
+                <strong class="ator"> Filming Locations:</strong> <span class="personagem">Atlanta (USA), Vancouver (Canada)</span> <br />
+                <strong class="ator"> Original Language:</strong> <span class="personagem">English</span> <br />
+                <strong class="ator"> Distribution: </strong> <span class="personagem">Theatrical + Streaming (HBO Max)</span> <br />
+              </p>
+
+              <p class="funfact">
+                <strong class="ator"> Fun Facts: </strong> <br> <span class="personagem">First Superman film of the rebooted DCU. <br> Costume design inspired by the 90s comics. <br> Rachel Brosnahan’s performance as Lois has been widely praised by critics.</span> <br />
+              </p>
+            </section>
+
+            <!-- Reviews -->
+            <input type="radio" id="reviewstab" name="tabs" />
+            <label for="reviewstab">Reviews</label>
+            <section class="tab">
+              <p class="spacep">
+                <strong class="ator"> ⭐ 4.6 / 5 — Based on 12,453 viewer ratings <br />
+                — Cineverse Weekly:</strong> <span class="personagem">"A heartfelt and powerful reboot. Corenswet
+                nails the role." </span> <br />
+
+                <strong class="ator">— SuperHeroReport.com:</strong> <span class="personagem">English</span> <br />
+                <strong class="ator"> — Jhonw:</strong> <span class="personagem">"Lex Luthor finally gets the sinister
+                spotlight he deserves."</span> <br />
+                <strong class="ator"> — IGN (fictional):</strong> <span class="personagem">"Best Superman film since Man of Steel."</span> <br />
+                <strong class="ator"> — user_superfan99:</strong> <span class="personagem">"Finally, a Superman with emotion and
+                presence. I cried twice."</span> <br />
+                <strong class="ator"> — loislane4life:</strong> <span class="personagem">"Rachel is iconic. Best Lois Lane ever."</span> <br />
+                <strong class="ator"> — kryptonian42:</strong> <span class="personagem">"That mid-credit scene? Absolute chills."</span> <br />
+              </p>
+            </section>
+
+            <!-- More Like This -->
+            <input type="radio" id="moreliketab" name="tabs" />
+            <label for="moreliketab">More Like This</label>
+            <section class="tab">
+              <p class="spacep">
+                <strong class="ator"> The Flash</strong> <span class="personagem">(2023)</span> <br />
+                <strong class="ator"> The Batman </strong> <span class="personagem">(2022)</span> <br />
+                <strong class="ator"> Wonder Woman</strong> <span class="personagem">(2017) </span> <br />
+                <strong class="ator"> Man of Steel </strong> <span class="personagem">(2013)</span> <br />
+                <strong class="ator">  Shazam! </strong> <span class="personagem">(2019)</span> <br />
+                <strong class="ator"> Green Lantern:</strong> <span class="personagem">Rebirth (Upcoming)</span> <br /> 
+              </p>
+            </section>
+          </article>
+      </article>
+
+    </header>
+
+    <main class="main">
+      <h2 class="mightlike filmeslike">You might like</h2>
+      <section class="filmesmightlike">            
+            <article class="filmelist">
+              <a href="#">
+                <img src="https://i.pinimg.com/1200x/13/2e/88/132e8848588cd7c39cfcc1d5a7f6e1cd.jpg" alt="Filme: DeadPool 2" />
+                <h3>DeadPool 2</h3>
+              </a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#">
+                <img
+                src="https://i.pinimg.com/1200x/5a/d6/8d/5ad68da16c9891a8c4b40501bd120af9.jpg"
+                alt="Filme: Sinners"
+              />
+              <h3>Sinners</h3>
+              </a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/1200x/6d/b3/ca/6db3caf03f3bc9cd03fa04d8f51e80c2.jpg"
+                alt="Filme: Helstrom"
+              /><h3>Helstrom</h3></a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/1200x/f8/9e/6c/f89e6c4c4c6b9b1e7d60af56e197efd7.jpg"
+                alt="Filme: Foundation"
+              /><h3>Foundation</h3></a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/736x/f0/db/81/f0db816f99c627eb0c98837d22752571.jpg" alt="Filme: Luca "
+              /><h3>Luca</h3></a>
+            </article>
+          </section>
+
+          <h2 class="mightlike serieslike"> Pupular Series</h2>
+          <section class="seriesmightlike">
+            <article class="filmelist">
+              <a href="#">
+                <img src="https://i.pinimg.com/736x/d9/1e/67/d91e6782877172651fbc8b2f29e2bef0.jpg" alt="Serie: Peaky Blinders" />
+                <h3>Peaky Blinders</h3>
+              </a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#">
+                <img
+                src="https://i.pinimg.com/1200x/6b/3a/cc/6b3acc008245cc7a555a00113aef1a9f.jpg"
+                alt="Serie: Dark"
+              />
+              <h3>Dark</h3>
+              </a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/1200x/f9/d3/63/f9d3632cbdddae501b07a4d754424e6f.jpg"
+                alt="Serie: You"
+              /><h3>You</h3></a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/736x/f7/33/3e/f7333e16e7c620569931b36c4ca66e8f.jpg"
+                alt="Serie: Deaths Game"
+              /><h3>Deaths Game</h3></a>
+            </article>
+
+            <article class="filmelist">
+              <a href="#"><img
+                src="https://i.pinimg.com/736x/e6/b5/b7/e6b5b7bcc80450120af6a39b7814b0d9.jpg" alt="Serie: Stranger Things"
+              /><h3>Stranger Things</h3></a>
+            </article>
+
+      </section>
+    </main>
+
+    <footer>
+      <section class="legal-links">
+        <nav aria-label="Legal Links">
+          <ul>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Send Us Feedback</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Releases</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="social-media">
+        <ul>
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+
+      <h3>StreamMaster</h3>
+
+      <address>
+        <p class="fim">
+          &copy; 2025 StreamMaster and its affiliated companies. All rights
+          reserved.
+        </p>
+        <p>
+          Sports content programming varies by plan. To use StreamMaster, you
+          must be a subscriber and 18 years of age or older. Content is subject
+          to availability.
+        </p>
+        <small>
+          The StreamMaster service is marketed by The StreamMaster Company
+          (Brazil), São Paulo/SP – CEP 00000-000, Brazil, CNPJ/M
+          11.111.111/0001-10.
+        </small>
+      </address>
+    </footer>
+
+    <script src="assets2/js/script2.js"></script>
+  </body>
+</html>
+ 
