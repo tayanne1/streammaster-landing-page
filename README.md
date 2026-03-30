@@ -1,4 +1,4 @@
-# StreamMaster - Landing Page 🎬
+# StreamMaster - Landing Page (plans)
 
 Uma landing page fictícia criada como desafio de aprendizado em HTML e CSS. O projeto representa a página inicial de um serviço de streaming chamado **StreamMaster**, com design moderno e responsivo.
 
